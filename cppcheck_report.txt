@@ -1,0 +1,344 @@
+IDE/Microchip-Harmony/wolfmqtt_client/firmware/src/app.c:173:26: style: Unused variable: tcpipStat [unusedVariable]
+            unsigned int tcpipStat;
+                         ^
+IDE/Microchip-Harmony/wolfmqtt_firmware/firmware/src/app.c:171:26: style: Unused variable: tcpipStat [unusedVariable]
+            unsigned int tcpipStat;
+                         ^
+examples/aws/awsiot.c:853:20: style: Condition 'rc==0' is always true [knownConditionTrueFalse]
+        return (rc == 0) ? 0 : EXIT_FAILURE;
+                   ^
+examples/aws/awsiot.c:850:14: note: Assignment 'rc=0', assigned value is 0
+        rc = 0; /* return success, so make check passes with TLS disabled */
+             ^
+examples/aws/awsiot.c:853:20: note: Condition 'rc==0' is always true
+        return (rc == 0) ? 0 : EXIT_FAILURE;
+                   ^
+examples/aws/awsiot.c:630:21: style: Condition 'mStopRead' is always false [knownConditionTrueFalse]
+                if (mStopRead || mqttCtx->test_mode) {
+                    ^
+examples/azure/azureiothub.c:674:20: style: Condition 'rc==0' is always true [knownConditionTrueFalse]
+        return (rc == 0) ? 0 : EXIT_FAILURE;
+                   ^
+examples/azure/azureiothub.c:671:14: note: Assignment 'rc=0', assigned value is 0
+        rc = 0; /* return success, so make check passes with TLS disabled */
+             ^
+examples/azure/azureiothub.c:674:20: note: Condition 'rc==0' is always true
+        return (rc == 0) ? 0 : EXIT_FAILURE;
+                   ^
+examples/firmware/fwclient.c:563:20: style: Condition 'rc==0' is always true [knownConditionTrueFalse]
+        return (rc == 0) ? 0 : EXIT_FAILURE;
+                   ^
+examples/firmware/fwclient.c:560:14: note: Assignment 'rc=0', assigned value is 0
+        rc = 0; /* return success, so make check passes with TLS disabled */
+             ^
+examples/firmware/fwclient.c:563:20: note: Condition 'rc==0' is always true
+        return (rc == 0) ? 0 : EXIT_FAILURE;
+                   ^
+examples/firmware/fwpush.c:601:20: style: Condition 'rc==0' is always true [knownConditionTrueFalse]
+        return (rc == 0) ? 0 : EXIT_FAILURE;
+                   ^
+examples/firmware/fwpush.c:598:14: note: Assignment 'rc=0', assigned value is 0
+        rc = 0; /* return success, so make check passes with TLS disabled */
+             ^
+examples/firmware/fwpush.c:601:20: note: Condition 'rc==0' is always true
+        return (rc == 0) ? 0 : EXIT_FAILURE;
+                   ^
+examples/mqttexample.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+examples/mqttexample.c:178:12: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (rc == 0) {
+           ^
+examples/mqttexample.c:169:12: note: First condition
+    if (rc == 0) {
+           ^
+examples/mqttexample.c:178:12: note: Second condition
+    if (rc == 0) {
+           ^
+examples/mqttexample.c:188:9: warning:inconclusive: Either the condition 'tmp==NULL' is redundant or there is possible null pointer dereference: tmp. [nullPointerRedundantCheck]
+        tmp[inLen] = '_';
+        ^
+examples/mqttexample.c:181:17: note: Assuming that condition 'tmp==NULL' is not redundant
+        if (tmp == NULL) {
+                ^
+examples/mqttexample.c:188:9: note: Null pointer dereference
+        tmp[inLen] = '_';
+        ^
+examples/mqttexample.c:190:9: warning:inconclusive: Either the condition 'tmp==NULL' is redundant or there is possible null pointer dereference: tmp. [nullPointerRedundantCheck]
+        tmp[inLen + 1 + sizeof(rndHexStr)] = '\0';
+        ^
+examples/mqttexample.c:181:17: note: Assuming that condition 'tmp==NULL' is not redundant
+        if (tmp == NULL) {
+                ^
+examples/mqttexample.c:190:9: note: Null pointer dereference
+        tmp[inLen + 1 + sizeof(rndHexStr)] = '\0';
+        ^
+examples/mqttexample.c:189:21: warning:inconclusive: Either the condition 'tmp==NULL' is redundant or there is pointer arithmetic with NULL pointer. [nullPointerArithmeticRedundantCheck]
+        XMEMCPY(tmp + inLen + 1, rndHexStr, sizeof(rndHexStr));
+                    ^
+examples/mqttexample.c:181:17: note: Assuming that condition 'tmp==NULL' is not redundant
+        if (tmp == NULL) {
+                ^
+examples/mqttexample.c:189:21: note: Null pointer addition
+        XMEMCPY(tmp + inLen + 1, rndHexStr, sizeof(rndHexStr));
+                    ^
+examples/mqttexample.c:202:5: style:inconclusive: Found duplicate branches for 'if' and 'else'. [duplicateBranch]
+    if(XSTRNCMP(mqttCtx->app_name, "sn-client", 10)){
+    ^
+examples/mqttexample.c:222:5: note: Found duplicate branches for 'if' and 'else'.
+    else{
+    ^
+examples/mqttexample.c:202:5: note: Found duplicate branches for 'if' and 'else'.
+    if(XSTRNCMP(mqttCtx->app_name, "sn-client", 10)){
+    ^
+examples/mqttnet.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+examples/mqttnet.c:143:42: style: The comparison 'timeout == 0' is always true. [knownConditionTrueFalse]
+    while ((bytes < buf_len) && (timeout == 0)) {
+                                         ^
+examples/mqttnet.c:124:28: note: 'timeout' is assigned value '0' here.
+    int rc = -1, timeout = 0;
+                           ^
+examples/mqttnet.c:143:42: note: The comparison 'timeout == 0' is always true.
+    while ((bytes < buf_len) && (timeout == 0)) {
+                                         ^
+examples/mqttnet.c:911:9: style: Unused variable: Dummy [unusedVariable]
+    int Dummy;
+        ^
+examples/mqttnet.c:621:12: style: Condition 'rc==0' is always true [knownConditionTrueFalse]
+    if (rc == 0) {
+           ^
+examples/mqttnet.c:618:12: note: Assuming that condition 'rc!=0' is not redundant
+    if (rc != 0)
+           ^
+examples/mqttnet.c:621:12: note: Condition 'rc==0' is always true
+    if (rc == 0) {
+           ^
+examples/mqttsimple/mqttsimple.c:464:16: style: Condition 'rc==0' is always false [knownConditionTrueFalse]
+    return (rc == 0) ? 0 : EXIT_FAILURE;
+               ^
+examples/mqttsimple/mqttsimple.c:458:15: note: Assignment 'rc=-1', assigned value is -1
+    int rc = -1;
+              ^
+examples/mqttsimple/mqttsimple.c:464:16: note: Condition 'rc==0' is always false
+    return (rc == 0) ? 0 : EXIT_FAILURE;
+               ^
+examples/mqttsimple/mqttsimple.c:214:9: style: The scope of the variable 'rc' can be reduced. [variableScope]
+    int rc;
+        ^
+examples/multithread/multithread.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+examples/multithread/multithread.c:810:16: style: Condition 'rc==0' is always true [knownConditionTrueFalse]
+    return (rc == 0) ? 0 : EXIT_FAILURE;
+               ^
+examples/multithread/multithread.c:807:10: note: Assignment 'rc=0', assigned value is 0
+    rc = 0; /* return success, so make check passes with TLS disabled */
+         ^
+examples/multithread/multithread.c:810:16: note: Condition 'rc==0' is always true
+    return (rc == 0) ? 0 : EXIT_FAILURE;
+               ^
+examples/multithread/multithread.c:641:16: style: The if condition is the same as the previous if condition [duplicateCondition]
+        if (rc != MQTT_CODE_SUCCESS) {
+               ^
+examples/multithread/multithread.c:637:16: note: First condition
+        if (rc != MQTT_CODE_SUCCESS) {
+               ^
+examples/multithread/multithread.c:641:16: note: Second condition
+        if (rc != MQTT_CODE_SUCCESS) {
+               ^
+examples/nbclient/nbclient.c:731:20: style: Condition 'rc==0' is always true [knownConditionTrueFalse]
+        return (rc == 0) ? 0 : EXIT_FAILURE;
+                   ^
+examples/nbclient/nbclient.c:728:14: note: Assignment 'rc=0', assigned value is 0
+        rc = 0; /* return success, so make check passes with TLS disabled */
+             ^
+examples/nbclient/nbclient.c:731:20: note: Condition 'rc==0' is always true
+        return (rc == 0) ? 0 : EXIT_FAILURE;
+                   ^
+examples/sn-client/sn-multithread.c:686:16: style: Condition 'rc==0' is always true [knownConditionTrueFalse]
+    return (rc == 0) ? 0 : EXIT_FAILURE;
+               ^
+examples/sn-client/sn-multithread.c:682:10: note: Assignment 'rc=0', assigned value is 0
+    rc = 0; /* return success, so make check passes with TLS disabled */
+         ^
+examples/sn-client/sn-multithread.c:686:16: note: Condition 'rc==0' is always true
+    return (rc == 0) ? 0 : EXIT_FAILURE;
+               ^
+examples/sn-client/sn-multithread.c:512:9: style: The scope of the variable 'rc' can be reduced. [variableScope]
+    int rc;
+        ^
+src/mqtt_client.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 35 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/mqtt_client.c:1768:16: style: Condition 'rc>=0' is always true [knownConditionTrueFalse]
+        if (rc >= 0) {
+               ^
+src/mqtt_client.c:1729:20: note: Assuming that condition 'rc<0' is not redundant
+            if (rc < 0) {
+                   ^
+src/mqtt_client.c:1738:37: note: Assuming condition is false
+            if (publish->buffer_pos < publish->buffer_len) {
+                                    ^
+src/mqtt_client.c:1768:16: note: Condition 'rc>=0' is always true
+        if (rc >= 0) {
+               ^
+src/mqtt_client.c:3158:22: style: Variable 'disc' is assigned a value that is never used. [unreadVariable]
+                disc = (SN_Disconnect*)packet_obj;
+                     ^
+src/mqtt_packet.c:1302:9: style: Condition 'subscribe_ack' is always true [knownConditionTrueFalse]
+    if (subscribe_ack) {
+        ^
+src/mqtt_packet.c:1289:60: note: Assuming that condition 'subscribe_ack==NULL' is not redundant
+    if (rx_buf == NULL || rx_buf_len <= 0 || subscribe_ack == NULL) {
+                                                           ^
+src/mqtt_packet.c:1296:20: note: Assuming condition is false
+    if (header_len < 0) {
+                   ^
+src/mqtt_packet.c:1302:9: note: Condition 'subscribe_ack' is always true
+    if (subscribe_ack) {
+        ^
+src/mqtt_packet.c:1441:9: style: Condition 'unsubscribe_ack' is always true [knownConditionTrueFalse]
+    if (unsubscribe_ack) {
+        ^
+src/mqtt_packet.c:1428:62: note: Assuming that condition 'unsubscribe_ack==NULL' is not redundant
+    if (rx_buf == NULL || rx_buf_len <= 0 || unsubscribe_ack == NULL) {
+                                                             ^
+src/mqtt_packet.c:1435:20: note: Assuming condition is false
+    if (header_len < 0) {
+                   ^
+src/mqtt_packet.c:1441:9: note: Condition 'unsubscribe_ack' is always true
+    if (unsubscribe_ack) {
+        ^
+src/mqtt_packet.c:1275:19: warning: Either the condition 'tx_payload!=NULL' is redundant or there is pointer arithmetic with NULL pointer. [nullPointerArithmeticRedundantCheck]
+        tx_payload++;
+                  ^
+src/mqtt_packet.c:1272:24: note: Assuming that condition 'tx_payload!=NULL' is not redundant
+        if (tx_payload != NULL) {
+                       ^
+src/mqtt_packet.c:1275:19: note: Null pointer addition
+        tx_payload++;
+                  ^
+src/mqtt_packet.c:1948:13: style: The scope of the variable 'len' can be reduced. [variableScope]
+    int rc, len, remain_read = 0;
+            ^
+src/mqtt_packet.c:366:17: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+    int rc = 0, tmp;
+                ^
+src/mqtt_packet.c:487:16: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+    int total, tmp;
+               ^
+src/mqtt_packet.c:1609:33: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+    int header_len, remain_len, tmp;
+                                ^
+src/mqtt_packet.c:1721:33: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+    int header_len, remain_len, tmp;
+                                ^
+src/mqtt_packet.c:527:20: style: Variable 'tmp' is assigned a value that is never used. [unreadVariable]
+                tmp++;
+                   ^
+src/mqtt_packet.c:3576:33: style: Variable 'client->packet.stat' is reassigned a value before the old one has been used. 'break;' missing? [redundantAssignInSwitch]
+            client->packet.stat = MQTT_PK_READ;
+                                ^
+src/mqtt_packet.c:3570:33: note: $symbol is assigned
+            client->packet.stat = MQTT_PK_READ_HEAD;
+                                ^
+src/mqtt_packet.c:3576:33: note: $symbol is overwritten
+            client->packet.stat = MQTT_PK_READ;
+                                ^
+src/mqtt_socket.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/mqtt_socket.c:385:21: style: Condition 'use_tls' is always false [knownConditionTrueFalse]
+            port = (use_tls) ? MQTT_SECURE_PORT : MQTT_DEFAULT_PORT;
+                    ^
+src/mqtt_socket.c:377:9: note: Assuming that condition 'use_tls' is not redundant
+    if (use_tls) {
+        ^
+src/mqtt_socket.c:385:21: note: Condition 'use_tls' is always false
+            port = (use_tls) ? MQTT_SECURE_PORT : MQTT_DEFAULT_PORT;
+                    ^
+src/mqtt_socket.c:477:20: style: Variable 'errnum' is assigned a value that is never used. [unreadVariable]
+        int errnum = 0;
+                   ^
+IDE/Microchip-Harmony/wolfmqtt_client/firmware/src/app.c:138:0: style: The function 'APP_Initialize' is never used. [unusedFunction]
+
+^
+IDE/Microchip-Harmony/wolfmqtt_client/firmware/src/app.c:163:0: style: The function 'APP_Tasks' is never used. [unusedFunction]
+
+^
+src/mqtt_client.c:2570:0: style: The function 'MqttClient_IsMessageActive' is never used. [unusedFunction]
+
+^
+src/mqtt_client.c:2302:0: style: The function 'MqttClient_Ping' is never used. [unusedFunction]
+
+^
+src/mqtt_client.c:1996:0: style: The function 'MqttClient_Publish_ex' is never used. [unusedFunction]
+
+^
+src/mqtt_packet.c:1719:0: style: The function 'MqttDecode_Auth' is never used. [unusedFunction]
+
+^
+src/mqtt_packet.c:1607:0: style: The function 'MqttDecode_Disconnect' is never used. [unusedFunction]
+
+^
+src/mqtt_packet.c:1662:0: style: The function 'MqttEncode_Auth' is never used. [unusedFunction]
+
+^
+src/mqtt_packet.c:1796:0: style: The function 'MqttProps_Init' is never used. [unusedFunction]
+
+^
+src/mqtt_packet.c:1804:0: style: The function 'MqttProps_ShutDown' is never used. [unusedFunction]
+
+^
+src/mqtt_client.c:3472:0: style: The function 'SN_Client_SearchGW' is never used. [unusedFunction]
+
+^
+src/mqtt_client.c:3891:0: style: The function 'SN_Client_WillMsgUpdate' is never used. [unusedFunction]
+
+^
+src/mqtt_client.c:3804:0: style: The function 'SN_Client_WillTopicUpdate' is never used. [unusedFunction]
+
+^
+src/mqtt_packet.c:2243:0: style: The function 'SN_Decode_Advertise' is never used. [unusedFunction]
+
+^
+src/mqtt_packet.c:2759:0: style: The function 'SN_Decode_ConnectAck' is never used. [unusedFunction]
+
+^
+examples/aws/awsiot.c:799:0: style: The function 'awsiot_main' is never used. [unusedFunction]
+
+^
+examples/azure/azureiothub.c:620:0: style: The function 'azureiothub_main' is never used. [unusedFunction]
+
+^
+examples/firmware/fwclient.c:514:0: style: The function 'fwclient_main' is never used. [unusedFunction]
+
+^
+examples/mqttclient/mqttclient.c:700:0: style: The function 'mqttclient_main' is never used. [unusedFunction]
+
+^
+examples/multithread/multithread.c:768:0: style: The function 'multithread_main' is never used. [unusedFunction]
+
+^
+examples/sn-client/sn-client_qos-1.c:165:0: style: The function 'sn_QoSn1_main' is never used. [unusedFunction]
+
+^
+examples/sn-client/sn-client.c:672:0: style: The function 'sn_main' is never used. [unusedFunction]
+
+^
+examples/sn-client/sn-multithread.c:638:0: style: The function 'sn_multithread_main' is never used. [unusedFunction]
+
+^
+examples/wiot/wiot.c:403:0: style: The function 'wiot_main' is never used. [unusedFunction]
+
+^
+examples/mqttport.c:86:0: style: The function 'z_fs_close' is never used. [unusedFunction]
+
+^
+examples/mqttport.c:36:0: style: The function 'z_fs_open' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
